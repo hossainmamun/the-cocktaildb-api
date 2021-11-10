@@ -1,38 +1,244 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Georama:wght@100;200;300;400;500;600;700;800;900&family=Oswald:wght@200;300;400;500;600;700&family=Pacifico&family=Raleway:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: "Lobster", cursive;
+  font-family: "Georama", sans-serif;
+  font-family: "Oswald", sans-serif;
+  font-family: "Pacifico", cursive;
+  font-family: "Raleway", sans-serif;
+  font-family: "Roboto Slab", serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+html {
+  overflow-x: hidden;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Oswald", sans-serif;
+}
+
+p {
+  font-family: "Roboto Slab", serif;
+}
+
+a {
+  text-decoration: none;
+  font-family: "Georama", sans-serif;
+}
+
+.general-btn {
+  padding: 10px 20px;
+  border: 2px solid #1976d2;
+  background: #1976d2;
+  color: #fff;
+  font-size: 1.1rem;
+  text-transform: capitalize;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  transition: 0.4s ease-in-out;
+  -webkit-transition: 0.4s ease-in-out;
+  -moz-transition: 0.4s ease-in-out;
+  -ms-transition: 0.4s ease-in-out;
+  -o-transition: 0.4s ease-in-out;
+}
+
+.general-btn:hover {
+  color: #000;
+  background: transparent;
+}
+
+.error-page {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  height: 100vh;
 }
 
-.App-link {
-  color: #61dafb;
+.error-page img {
+  width: 300px;
+  height: 180px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.error-page h2 {
+  text-transform: capitalize;
+  margin: 20px 0;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
 }
+
+.error-page p {
+  color: red;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+}
+
+#main-header {
+  background-image: url("https://i.ibb.co/HGDKgRz/make-drink.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 70vh;
+  position: relative;
+  margin: 0 0 100px;
+}
+
+#main-header .overlay {
+  position: absolute;
+  height: 70vh;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.home-nav {
+  background: transparent;
+}
+
+.cocktail-nav {
+  /* background: rgba(0, 0, 0, 0.4); */
+  padding: 0;
+  height: 80px;
+}
+
+.cocktail-nav .cocktail-brand {
+  font-family: "Georama", sans-serif;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.6rem;
+}
+
+.cocktail-nav .nav-link {
+  color: #fff;
+  text-transform: capitalize;
+  margin: 0 8px;
+  font-size: 1.1rem;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+}
+
+.cocktail-nav .nav-link:hover {
+  color: springgreen;
+}
+
+.cocktail-nav .btn {
+  color: springgreen !important;
+  border: 1px solid springgreen;
+}
+
+.cocktail-nav .btn:hover {
+  color: #fff !important;
+  border-color: #fff !important;
+}
+
+.cocktail-nav .cart-icon {
+  color: springgreen !important;
+  font-size: 1.4rem;
+  margin-left: 10px;
+}
+
+.cocktail-nav .cart-length {
+  color: springgreen;
+  margin-left: 5px;
+  display: inline-block;
+}
+
+.cocktail-nav.active {
+  background: #073b4c;
+}
+
+.banner {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
+.banner .banner-content h1 {
+  color: #fff;
+  text-transform: capitalize;
+}
+
+.banner .banner-content p {
+  color: #d7e0e9;
+  margin: 20px 0;
+  font-size: 1rem;
+  text-transform: capitalize;
+}
+
+.banner .banner-content input {
+  padding: 15px 20px;
+}
+
+.banner .popular-btn {
+  background: transparent;
+  border: 2px solid #fff;
+}
+
+.banner .popular-btn:hover {
+  background: #1976d2;
+  color: #fff;
+  border: 2px solid #1976d2;
+}
+
+.header-section h2 {
+  text-transform: capitalize;
+  font-size: 2.5rem;
+  text-align: center;
+  margin: 10px 0 15px 0;
+}
+
+.header-section p {
+  text-align: center;
+  color: #6c757d;
+  margin: 0 0 20px;
+}
+
+.popular-item {
+  margin: 0 0 100px;
+}
+
+.order-btn {
+  background: #ff5400;
+  border: 2px solid #ff5400;
+}
+
+.p-btn {
+  cursor: pointer;
+}
+
+.p-btn:hover {
+  color: red;
+}
+/*# sourceMappingURL=App.css.map */
